@@ -1,6 +1,6 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "csharp-achieve", "csharp-achieve\csharp-achieve.csproj", "{47D1795A-A721-4B67-982D-8FD5528A59EA}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "csharp-lang", "csharp-lang\csharp-lang.csproj", "{27CB2E94-718B-4A6D-ADB6-085A5B0C4BC0}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -8,9 +8,9 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{47D1795A-A721-4B67-982D-8FD5528A59EA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{47D1795A-A721-4B67-982D-8FD5528A59EA}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{47D1795A-A721-4B67-982D-8FD5528A59EA}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{47D1795A-A721-4B67-982D-8FD5528A59EA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{27CB2E94-718B-4A6D-ADB6-085A5B0C4BC0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{27CB2E94-718B-4A6D-ADB6-085A5B0C4BC0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{27CB2E94-718B-4A6D-ADB6-085A5B0C4BC0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{27CB2E94-718B-4A6D-ADB6-085A5B0C4BC0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

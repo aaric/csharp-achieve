@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace csharp_achieve
+namespace csharp_lang
 {
     internal class Program
     {
