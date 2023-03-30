@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace csharp_lang
+namespace ConsoleLang
 {
     internal class Program
     {
@@ -37,6 +37,16 @@ namespace csharp_lang
             Console.WriteLine($"decimalMin={decimalMin}, decimalMax={decimalMax}");
             double radius = 2.50D, PI = Math.PI;
             Console.WriteLine($"PI * radius * radius = {PI * radius * radius}");
+
+            // if else
+            if (greeting.Contains("hello") && greeting.Length > 10)
+            {
+                Console.WriteLine("You are right!");
+            }
+            else
+            {
+                Console.WriteLine("You are wrong!");
+            }
 
             // exit
             //Console.ReadKey();
