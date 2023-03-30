@@ -48,6 +48,22 @@ namespace ConsoleLang
                 Console.WriteLine("You are wrong!");
             }
 
+            // loop
+            int i = 10;
+            do
+            {
+                Console.WriteLine($"i = {i}");
+                i--;
+            } while (i > 0);
+
+            for (int j = 0; j < 10; j++)
+            {
+                if (j % 3 == 0)
+                {
+                    Console.WriteLine($"j = {j}");
+                }
+            }
+
             // exit
             //Console.ReadKey();
         }
