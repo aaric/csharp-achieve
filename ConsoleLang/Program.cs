@@ -10,7 +10,7 @@ namespace ConsoleLang
          */
         public static void Main(string[] args)
         {
-            string clazz = typeof(LoopPrinter).Name;
+            string clazz = typeof(ListPrinter).Name;
             switch (clazz)
             {
                 case "StringPrinter":
@@ -22,8 +22,11 @@ namespace ConsoleLang
                 case "LoopPrinter":
                     LoopPrinter.print();
                     break;
+                case "ListPrinter":
+                    ListPrinter.print();
+                    break;
                 default:
-                    Console.WriteLine("Error: No class found!");
+                    Console.WriteLine("Error: Not found!");
                     break;
             }
 
