@@ -19,13 +19,13 @@ namespace ConsoleLang.Lang
 
     public class Student
     {
-        private long Id { get; }
-        private string Name { get; }
-        private int Age { get; set; }
+        public long Id { get; }
+        public string Name { get; }
+        public int Age { get; set; }
 
-        private List<Exam> Exams { get; set; }
+        public List<Exam> Exams { get; set; }
 
-        private int Score
+        public int Score
         {
             get
             {
