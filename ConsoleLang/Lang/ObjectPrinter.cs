@@ -7,25 +7,25 @@ namespace ConsoleLang.Lang
     {
         public string Subject { get; set; }
         public int Grade { get; set; }
-        public DateTime time { get; set; }
+        public DateTime Time { get; set; }
 
         public Exam(string subject, int grade)
         {
             this.Subject = subject;
             this.Grade = grade;
-            this.time = DateTime.Now;
+            this.Time = DateTime.Now;
         }
     }
 
     public class Student
     {
-        private long Id { get; }
-        private string Name { get; }
-        private int Age { get; set; }
+        public long Id { get; }
+        public string Name { get; }
+        public int Age { get; set; }
 
-        private List<Exam> Exams { get; set; }
+        public List<Exam> Exams { get; set; }
 
-        private int Score
+        public int Score
         {
             get
             {
@@ -42,14 +42,14 @@ namespace ConsoleLang.Lang
             }
         }
 
-        private static long _total = 0;
+        private static long _Total = 0;
 
         public Student(long id, string name)
         {
             this.Id = id;
             this.Name = name;
             this.Exams = new List<Exam>();
-            _total++;
+            _Total++;
         }
 
         public void addExam(Exam exam)

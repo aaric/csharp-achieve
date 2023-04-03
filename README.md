@@ -6,4 +6,5 @@
 
 |NO.|Project Name|Remark|
 |:---:|:---:|-----|
-|1|`ConsoleLang`|*C# language demo*|
+|1|`ConsoleLang`|*C# Language Demo*|
+|2|`DesktopWinForm`|*C# WinForm Demo*|
