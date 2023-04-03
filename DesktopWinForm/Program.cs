@@ -16,7 +16,10 @@ namespace DesktopWinForm
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new LoginForm());
+
+            //Application.Run(new LoginForm());
+            StorageHelper.Instance.LoginForm = new LoginForm();
+            Application.Run(StorageHelper.Instance.LoginForm);
         }
     }
 }

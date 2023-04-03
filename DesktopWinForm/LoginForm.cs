@@ -29,8 +29,12 @@ namespace DesktopWinForm
             if ("admin" == account && "123456" == password)
             {
                 //MessageBox.Show("账号密码正确");
-                new MainForm(account).Show();
-                this.Hide();
+                StorageHelper.Instance.Account = account;
+                StorageHelper.Instance.MainForm = new MainForm();
+                //new MainForm(account).Show();
+                StorageHelper.Instance.MainForm.Show();
+                //this.Hide();
+                StorageHelper.Instance.LoginForm.Hide();
             }
             else
             {

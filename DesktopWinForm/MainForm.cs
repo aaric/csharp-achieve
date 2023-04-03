@@ -14,9 +14,11 @@ namespace DesktopWinForm
     {
         public string Account { get; set; }
 
-        public MainForm(string account)
+        //public MainForm(string account)
+        public MainForm()
         {
-            this.Account = account;
+            //this.Account = account;
+            this.Account = StorageHelper.Instance.Account;
 
             InitializeComponent();
 
