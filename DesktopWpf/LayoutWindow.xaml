@@ -6,10 +6,29 @@
         xmlns:local="clr-namespace:DesktopWpf"
         mc:Ignorable="d"
         Title="布局控件" Height="450" Width="800">
+    <!-- Window Style -->
+    <Window.Resources>
+        <Style TargetType="Button">
+            <Setter Property="Background" Value="DarkGray" />
+        </Style>
+        <Style x:Key="MenuButton" TargetType="Button" BasedOn="{StaticResource {x:Type Button}}">
+            <Setter Property="Width" Value="100" />
+            <Setter Property="Height" Value="40" />
+        </Style>
+        <Style x:Key="ShortcutButton" TargetType="Button" BasedOn="{StaticResource {x:Type Button}}">
+            <Setter Property="Width" Value="40" />
+            <Setter Property="Height" Value="40" />
+        </Style>
+        <Style x:Key="LineButton" TargetType="Button" BasedOn="{StaticResource {x:Type Button}}">
+            <Setter Property="Width" Value="40" />
+            <Setter Property="Height" Value="20" />
+        </Style>
+    </Window.Resources>
+    
     <!-- StackPanel -->
     <!--<StackPanel>
-        <Button Content="测试1" Width="100" Height="40" />
-        <Button Content="测试2" Width="100" Height="40" />
+        <Button Content="测试1" />
+        <Button Content="测试2" />
     </StackPanel>-->
 
     <!-- Grid -->
@@ -21,23 +40,23 @@
             <RowDefinition Height="30" />
         </Grid.RowDefinitions>
 
-        <!--<Button Grid.Column="0" HorizontalAlignment="Left" Content="测试1" Width="100" Height="40" />
+        <!--<Button Grid.Column="0" HorizontalAlignment="Left" Content="测试1" />
         <Button Grid.Column="0" HorizontalAlignment="Left" Margin="110, 0, 0, 0" Content="测试2" Width="100" Height="40" />
         <Button Grid.Column="0" HorizontalAlignment="Left" Margin="220, 0, 0, 0" Content="测试3" Width="100" Height="40" />-->
         
         <StackPanel Grid.Column="0" Orientation="Horizontal">
-            <Button Content="测试1" Width="100" Height="40" />
-            <Button Content="测试2" Width="100" Height="40" />
-            <Button Content="测试3" Width="100" Height="40" />
+            <Button Content="测试1" Style="{StaticResource MenuButton}" />
+            <Button Content="测试2" Style="{StaticResource MenuButton}" />
+            <Button Content="测试3" Style="{StaticResource MenuButton}" />
         </StackPanel>
 
         <StackPanel Grid.Row="1" Grid.Column="0" Orientation="Horizontal">
-            <Button Content="I" Width="40" Height="40" />
-            <Button Content="II" Width="40" Height="40" />
-            <Button Content="III" Width="40" Height="40" />
-            <Button Content="VI" Width="40" Height="40" />
-            <Button Content="V" Width="40" Height="40" />
-            <Button Content="VI" Width="40" Height="40" />
+            <Button Content="I" Style="{StaticResource ShortcutButton}" />
+            <Button Content="II" Style="{StaticResource ShortcutButton}" />
+            <Button Content="III" Style="{StaticResource ShortcutButton}" />
+            <Button Content="VI" Style="{StaticResource ShortcutButton}" />
+            <Button Content="V" Style="{StaticResource ShortcutButton}" />
+            <Button Content="VI" Style="{StaticResource ShortcutButton}" />
         </StackPanel>
         
         <Grid Grid.Row="2" Grid.Column="0">
@@ -47,16 +66,16 @@
             </Grid.ColumnDefinitions>
             
             <StackPanel Grid.Column="0">
-                <Button Content="1" Width="40" Height="20" />
-                <Button Content="2" Width="40" Height="20" />
-                <Button Content="3" Width="40" Height="20" />
-                <Button Content="4" Width="40" Height="20" />
-                <Button Content="5" Width="40" Height="20" />
-                <Button Content="6" Width="40" Height="20" />
-                <Button Content="7" Width="40" Height="20" />
-                <Button Content="8" Width="40" Height="20" />
-                <Button Content="9" Width="40" Height="20" />
-                <Button Content="10" Width="40" Height="20" />
+                <Button Content="1" Style="{DynamicResource LineButton}" />
+                <Button Content="2" Style="{DynamicResource LineButton}" />
+                <Button Content="3" Style="{DynamicResource LineButton}" />
+                <Button Content="4" Style="{DynamicResource LineButton}" />
+                <Button Content="5" Style="{DynamicResource LineButton}" />
+                <Button Content="6" Style="{DynamicResource LineButton}" />
+                <Button Content="7" Style="{DynamicResource LineButton}" />
+                <Button Content="8" Style="{DynamicResource LineButton}" />
+                <Button Content="9" Style="{DynamicResource LineButton}" />
+                <Button Content="10" Style="{DynamicResource LineButton}" />
             </StackPanel>
             
             <TextBox Grid.Column="1" TextWrapping="Wrap"></TextBox>
