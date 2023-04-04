@@ -3,9 +3,9 @@ using System.Collections.Generic;
 
 namespace ConsoleLang.Lang
 {
-    public class ListPrinter
+    public class ListPrinter : MyPrinter
     {
-        public static void print()
+        public void print()
         {
             var dbs = new List<string> { "SQLite", "Access", "MySQL", "MariaDB", "PostgreSQL" };
 

@@ -2,9 +2,9 @@
 
 namespace ConsoleLang.Lang
 {
-    public class LoopPrinter
+    public class LoopPrinter : MyPrinter
     {
-        public static void print()
+        public void print()
         {
             // loop
             int i = 10;

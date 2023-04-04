@@ -1,5 +1,4 @@
 ﻿using System;
-using System.IO;
 using ConsoleLang.Lang;
 
 namespace ConsoleLang
@@ -11,27 +10,33 @@ namespace ConsoleLang
          */
         public static void Main(string[] args)
         {
+            MyPrinter myPrinter = null;
             string clazz = typeof(ObjectPrinter).Name;
             switch (clazz)
             {
                 case "StringPrinter":
-                    StringPrinter.print();
+                    myPrinter = new StringPrinter();
                     break;
                 case "NumberPrinter":
-                    NumberPrinter.print();
+                    myPrinter = new NumberPrinter();
                     break;
                 case "LoopPrinter":
-                    LoopPrinter.print();
+                    myPrinter = new LoopPrinter();
                     break;
                 case "ListPrinter":
-                    ListPrinter.print();
+                    myPrinter = new ListPrinter();
                     break;
                 case "ObjectPrinter":
-                    ObjectPrinter.print();
+                    myPrinter = new ObjectPrinter();
                     break;
                 default:
                     Console.WriteLine("Error: Not found!");
                     break;
+            }
+
+            if (null != myPrinter)
+            {
+                myPrinter.print();
             }
 
             // exit

@@ -63,9 +63,9 @@ namespace ConsoleLang.Lang
         }
     }
 
-    public class ObjectPrinter
+    public class ObjectPrinter : MyPrinter
     {
-        public static void print()
+        public void print()
         {
             var s1 = new Student(10000L, "Aaric");
             s1.addExam(new Exam("Chinese", 80));
