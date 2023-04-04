@@ -11,7 +11,7 @@ namespace ConsoleLang
         public static void Main(string[] args)
         {
             MyPrinter myPrinter = null;
-            string clazz = typeof(ObjectPrinter).Name;
+            string clazz = typeof(JsonPrinter).Name;
             switch (clazz)
             {
                 case "StringPrinter":
@@ -28,6 +28,9 @@ namespace ConsoleLang
                     break;
                 case "ObjectPrinter":
                     myPrinter = new ObjectPrinter();
+                    break;
+                case "JsonPrinter":
+                    myPrinter = new JsonPrinter();
                     break;
                 default:
                     Console.WriteLine("Error: Not found!");
