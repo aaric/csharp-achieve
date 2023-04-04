@@ -6,6 +6,11 @@
         xmlns:local="clr-namespace:DesktopWpf"
         mc:Ignorable="d"
         Title="布局控件" Height="450" Width="800">
+    <!-- StyleFile -->
+    <Window.Resources>
+        <ResourceDictionary Source="LayoutWindowStyle.xaml" />
+    </Window.Resources>
+    
     <!-- StackPanel -->
     <!--<StackPanel>
         <Button Content="测试1" />

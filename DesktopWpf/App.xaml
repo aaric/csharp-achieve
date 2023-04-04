@@ -4,6 +4,6 @@
              xmlns:local="clr-namespace:DesktopWpf"
              StartupUri="LayoutWindow.xaml">
     <Application.Resources>
-        <ResourceDictionary Source="LayoutWindowStyle.xaml" />
+        <!--<ResourceDictionary Source="LayoutWindowStyle.xaml" />-->
     </Application.Resources>
 </Application>
