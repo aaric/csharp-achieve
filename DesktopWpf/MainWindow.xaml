@@ -7,11 +7,7 @@
         mc:Ignorable="d"
         Title="测试界面" Height="300" Width="450">
     <Window.Resources>
-        <Style TargetType="Button">
-            <Setter Property="Background" Value="Orange" />
-            <Setter Property="Width" Value="100" />
-            <Setter Property="Height" Value="40" />
-        </Style>
+        <ResourceDictionary Source="MainWindowStyle.xaml" />
     </Window.Resources>
     
     <Grid ShowGridLines="True">
@@ -25,9 +21,27 @@
             <ColumnDefinition Width="2*" />
         </Grid.ColumnDefinitions>
         
-        <Button Grid.Row="0" Grid.Column="1" Content="测试" />
+        <Button Grid.Row="0" Grid.Column="1" Content="测试" BorderThickness="1" BorderBrush="Transparent">
+            <Button.Template>
+                <ControlTemplate TargetType="{x:Type Button}">
+                    <Border BorderThickness="{TemplateBinding BorderThickness}" BorderBrush="{TemplateBinding BorderBrush}" CornerRadius="10" Background="{TemplateBinding Background}">
+                        <!--<ContentPresenter VerticalAlignment="Center" HorizontalAlignment="Center"/>-->
+                        <TextBlock x:Name="TestButtonText" Text="{TemplateBinding Content}" VerticalAlignment="Center" HorizontalAlignment="Center" />
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter Property="Background" Value="Red"></Setter>
+                            <Setter TargetName="TestButtonText" Property="FontSize" Value="20"></Setter>
+                        </Trigger>
+                        <Trigger Property="IsPressed" Value="True">
+                            <Setter Property="Background" Value="Purple"></Setter>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Button.Template>
+        </Button>
         
-        <Button Grid.Row="1" Grid.Column="2" Content="测试">
+        <Button Grid.Row="1" Grid.Column="2" Content="测试" BorderThickness="1" BorderBrush="Transparent">
             <Button.Background>
                 <LinearGradientBrush EndPoint="1,1" StartPoint="0,0">
                     <GradientStop Color="#FFC564B8" Offset="0"/>
@@ -36,8 +50,9 @@
             </Button.Background>
             <Button.Template>
                 <ControlTemplate TargetType="{x:Type Button}">
-                    <Border BorderThickness="1" BorderBrush="White" CornerRadius="10" Background="{TemplateBinding Background}">
-                        <ContentPresenter VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                    <Border BorderThickness="{TemplateBinding BorderThickness}" BorderBrush="{TemplateBinding BorderBrush}" CornerRadius="10" Background="{TemplateBinding Background}">
+                        <!--<ContentPresenter VerticalAlignment="Center" HorizontalAlignment="Center"/>-->
+                        <TextBlock Text="{TemplateBinding Content}" VerticalAlignment="Center" HorizontalAlignment="Center" />
                     </Border>
                 </ControlTemplate>
             </Button.Template>

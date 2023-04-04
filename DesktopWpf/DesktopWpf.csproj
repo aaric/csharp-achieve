@@ -75,6 +75,7 @@
       <SubType>Code</SubType>
     </Compile>
     <Page Include="LayoutWindowStyle.xaml" />
+    <Page Include="MainWindowStyle.xaml" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs">
