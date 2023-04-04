@@ -6,25 +6,6 @@
         xmlns:local="clr-namespace:DesktopWpf"
         mc:Ignorable="d"
         Title="布局控件" Height="450" Width="800">
-    <!-- Window Style -->
-    <Window.Resources>
-        <Style TargetType="Button">
-            <Setter Property="Background" Value="DarkGray" />
-        </Style>
-        <Style x:Key="MenuButton" TargetType="Button" BasedOn="{StaticResource {x:Type Button}}">
-            <Setter Property="Width" Value="100" />
-            <Setter Property="Height" Value="40" />
-        </Style>
-        <Style x:Key="ShortcutButton" TargetType="Button" BasedOn="{StaticResource {x:Type Button}}">
-            <Setter Property="Width" Value="40" />
-            <Setter Property="Height" Value="40" />
-        </Style>
-        <Style x:Key="LineButton" TargetType="Button" BasedOn="{StaticResource {x:Type Button}}">
-            <Setter Property="Width" Value="40" />
-            <Setter Property="Height" Value="20" />
-        </Style>
-    </Window.Resources>
-    
     <!-- StackPanel -->
     <!--<StackPanel>
         <Button Content="测试1" />
