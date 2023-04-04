@@ -7,7 +7,20 @@
         mc:Ignorable="d"
         Title="测试界面" Height="300" Width="450">
     <Grid>
-        <Button Content="测试" HorizontalAlignment="Left" Margin="297,180,0,0" VerticalAlignment="Top" Height="40" Width="100"/>
-
+        <Button Content="测试" HorizontalAlignment="Left" Margin="250,200,0,0" VerticalAlignment="Top" Height="40" Width="100" BorderThickness="1,1,1,1">
+            <Button.Background>
+                <LinearGradientBrush EndPoint="1,1" StartPoint="0,0">
+                    <GradientStop Color="#FFC564B8" Offset="0"/>
+                    <GradientStop Color="#FFF57A7A" Offset="1"/>
+                </LinearGradientBrush>
+            </Button.Background>
+            <Button.Template>
+                <ControlTemplate TargetType="{x:Type Button}">
+                    <Border BorderThickness="1" BorderBrush="White" CornerRadius="10" Background="{TemplateBinding Background}">
+                        <ContentPresenter VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                    </Border>
+                </ControlTemplate>
+            </Button.Template>
+        </Button>
     </Grid>
 </Window>
