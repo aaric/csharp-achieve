@@ -6,8 +6,18 @@
         xmlns:local="clr-namespace:DesktopWpf"
         mc:Ignorable="d"
         Title="测试界面" Height="300" Width="450">
-    <Grid>
-        <Button Content="测试" HorizontalAlignment="Left" Margin="250,200,0,0" VerticalAlignment="Top" Height="40" Width="100" BorderThickness="1,1,1,1">
+    <Grid ShowGridLines="True">
+        <Grid.RowDefinitions>
+            <RowDefinition />
+            <RowDefinition />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto" />
+            <ColumnDefinition Width="1*" />
+            <ColumnDefinition Width="2*" />
+        </Grid.ColumnDefinitions>
+        
+        <Button Grid.Row="1" Grid.Column="2" Content="测试" Width="100" Height="40">
             <Button.Background>
                 <LinearGradientBrush EndPoint="1,1" StartPoint="0,0">
                     <GradientStop Color="#FFC564B8" Offset="0"/>
