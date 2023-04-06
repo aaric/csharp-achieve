@@ -15,6 +15,17 @@
         <Style x:Key="WarnButtonStyle" TargetType="Button" BasedOn="{StaticResource BaseButtonStyle}">
             <Setter Property="Background" Value="Red" />
         </Style>
+        <Style x:Key="TemplateButtonStyle" TargetType="Button">
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border Background="{TemplateBinding Background}">
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" />
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
     </Window.Resources>
     <Grid>
         <StackPanel>
@@ -22,6 +33,7 @@
             <Button Content="测试" Style="{StaticResource BaseButtonStyle}" />
             <Button Content="测试" Style="{StaticResource WarnButtonStyle}" />
             <Button Content="测试" Style="{StaticResource WarnButtonStyle}" Foreground="Black" />
+            <Button Content="测试" Style="{StaticResource TemplateButtonStyle}" Background="Purple" />
         </StackPanel>
     </Grid>
 </Window>
