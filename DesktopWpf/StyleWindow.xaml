@@ -1,0 +1,27 @@
+﻿<Window x:Class="DesktopWpf.StyleWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:DesktopWpf"
+        mc:Ignorable="d"
+        Title="StyleWindow" Height="300" Width="450">
+    <Window.Resources>
+        <Style x:Key="BaseButtonStyle" TargetType="Button">
+            <Setter Property="FontSize" Value="18" />
+            <Setter Property="Foreground" Value="White" />
+            <Setter Property="Background" Value="Green" />
+        </Style>
+        <Style x:Key="WarnButtonStyle" TargetType="Button" BasedOn="{StaticResource BaseButtonStyle}">
+            <Setter Property="Background" Value="Red" />
+        </Style>
+    </Window.Resources>
+    <Grid>
+        <StackPanel>
+            <!--<Button Content="测试" FontSize="18" Foreground="White" Background="Green" />-->
+            <Button Content="测试" Style="{StaticResource BaseButtonStyle}" />
+            <Button Content="测试" Style="{StaticResource WarnButtonStyle}" />
+            <Button Content="测试" Style="{StaticResource WarnButtonStyle}" Foreground="Black" />
+        </StackPanel>
+    </Grid>
+</Window>
