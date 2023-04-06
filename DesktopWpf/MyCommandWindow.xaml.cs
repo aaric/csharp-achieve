@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.Specialized;
+using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -32,18 +34,38 @@ namespace DesktopWpf
         }
     }
 
-    public class MyViewModel
+    public class MyViewModel : INotifyPropertyChanged
     {
+
         public MyCommand MyCommand { get; set; }
+
+        private string myName;
+
+        public event PropertyChangedEventHandler PropertyChanged;
+
+        public string MyName {
+            get
+            {
+                return myName;
+            }
+            set
+            {
+                myName = value;
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("MyName"));
+            }
+        }
 
         public MyViewModel()
         {
             this.MyCommand = new MyCommand(Show);
+            this.MyName = "hello pwf";
         }
 
         public void Show()
         {
-            MessageBox.Show("hello world");
+            string tips = "hello world";
+            MessageBox.Show(tips);
+            this.MyName = tips;
         }
     }
 
