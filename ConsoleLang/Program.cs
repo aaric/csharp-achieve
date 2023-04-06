@@ -11,7 +11,7 @@ namespace ConsoleLang
         public static void Main(string[] args)
         {
             MyPrinter myPrinter = null;
-            string clazz = typeof(HttpClientPrinter).Name;
+            string clazz = typeof(FilePrinter).Name;
             switch (clazz)
             {
                 case "StringPrinter":
@@ -34,6 +34,9 @@ namespace ConsoleLang
                     break;
                 case "HttpClientPrinter":
                     myPrinter = new HttpClientPrinter();
+                    break;
+                case "FilePrinter":
+                    myPrinter = new FilePrinter();
                     break;
                 default:
                     Console.WriteLine("Error: Not found!");
