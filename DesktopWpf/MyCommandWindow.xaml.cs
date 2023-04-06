@@ -41,8 +41,6 @@ namespace DesktopWpf
 
         private string myName;
 
-        public event PropertyChangedEventHandler PropertyChanged;
-
         public string MyName {
             get
             {
@@ -51,7 +49,8 @@ namespace DesktopWpf
             set
             {
                 myName = value;
-                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("MyName"));
+                //PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("MyName"));
+                NotifyPropertyChanged("MyName");
             }
         }
 
@@ -59,6 +58,13 @@ namespace DesktopWpf
         {
             this.MyCommand = new MyCommand(Show);
             this.MyName = "hello pwf";
+        }
+
+        public event PropertyChangedEventHandler PropertyChanged;
+
+        public void NotifyPropertyChanged(string propertyName)
+        {
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
         }
 
         public void Show()
