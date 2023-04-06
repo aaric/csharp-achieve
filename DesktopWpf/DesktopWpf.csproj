@@ -56,6 +56,10 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Page Include="LayoutNotepadWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="LayoutWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -68,6 +72,9 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="LayoutNotepadWindow.xaml.cs">
+      <DependentUpon>LayoutNotepadWindow.xaml</DependentUpon>
+    </Compile>
     <Compile Include="LayoutWindow.xaml.cs">
       <DependentUpon>LayoutWindow.xaml</DependentUpon>
     </Compile>
@@ -75,7 +82,9 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Page Include="LayoutWindowStyle.xaml" />
+    <Page Include="LayoutNotepadWindowStyle.xaml">
+      <SubType>Designer</SubType>
+    </Page>
     <Page Include="MainWindowStyle.xaml" />
   </ItemGroup>
   <ItemGroup>
