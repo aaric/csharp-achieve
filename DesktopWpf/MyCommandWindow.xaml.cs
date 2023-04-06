@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Collections.Specialized;
 using System.ComponentModel;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
@@ -34,7 +35,18 @@ namespace DesktopWpf
         }
     }
 
-    public class MyViewModel : INotifyPropertyChanged
+    public class BaseViewModel : INotifyPropertyChanged
+    {
+        public event PropertyChangedEventHandler PropertyChanged;
+
+        //public void NotifyPropertyChanged(string propertyName)
+        public void NotifyPropertyChanged([CallerMemberName] string propertyName = "")
+        {
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
+        }
+    }
+
+    public class MyViewModel : BaseViewModel
     {
 
         public MyCommand MyCommand { get; set; }
@@ -50,7 +62,8 @@ namespace DesktopWpf
             {
                 myName = value;
                 //PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("MyName"));
-                NotifyPropertyChanged("MyName");
+                //NotifyPropertyChanged("MyName");
+                NotifyPropertyChanged();
             }
         }
 
@@ -58,13 +71,6 @@ namespace DesktopWpf
         {
             this.MyCommand = new MyCommand(Show);
             this.MyName = "hello pwf";
-        }
-
-        public event PropertyChangedEventHandler PropertyChanged;
-
-        public void NotifyPropertyChanged(string propertyName)
-        {
-            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
         }
 
         public void Show()
