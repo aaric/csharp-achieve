@@ -31,6 +31,12 @@ namespace DesktopWpf
             ListBoxSimple.ItemsSource = list;
             DataGridSimple.ItemsSource = list;
         }
+
+        /*private void SliderBar_ValueChanged(object sender, RoutedPropertyChangedEventArgs<double> e)
+        {
+            SliderLabel.Content = SliderBar.Value.ToString();
+            SliderEdit.Text = SliderBar.Value.ToString();
+        }*/
     }
 
     public class ListBoxItemData

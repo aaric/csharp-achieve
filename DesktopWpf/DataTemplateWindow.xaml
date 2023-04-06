@@ -10,6 +10,7 @@
         <Grid.RowDefinitions>
             <RowDefinition />
             <RowDefinition />
+            <RowDefinition />
         </Grid.RowDefinitions>
         
         <!--<ListBox x:Name="listBoxSimple" />-->
@@ -40,8 +41,18 @@
                         </DataTemplate>
                     </DataGridTemplateColumn.CellTemplate>
                 </DataGridTemplateColumn>
-                
             </DataGrid.Columns>
         </DataGrid>
+
+        <StackPanel Grid.Row="2">
+            <!--<Slider x:Name="SliderBar" ValueChanged="SliderBar_ValueChanged" />
+            <Label x:Name="SliderLabel" />
+            <TextBox x:Name="SliderEdit" />-->
+            <Slider x:Name="SliderBar" />
+            <Label Content="{Binding ElementName=SliderBar,Path=Value,Mode=OneTime}" />
+            <TextBox Text="{Binding ElementName=SliderBar,Path=Value,Mode=OneWay}" />
+            <TextBox Text="{Binding ElementName=SliderBar,Path=Value,Mode=OneWayToSource}" />
+            <TextBox Text="{Binding ElementName=SliderBar,Path=Value,Mode=TwoWay}" />
+        </StackPanel>
     </Grid>
 </Window>
