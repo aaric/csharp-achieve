@@ -25,14 +25,15 @@ namespace ConsoleLang.Lang
          */
         public void print()
         {
-            JsonConvert.DefaultSettings = new Func<JsonSerializerSettings>(() =>
+            //JsonConvert.DefaultSettings = new Func<JsonSerializerSettings>(() =>
+            JsonConvert.DefaultSettings = () =>
             {
                 JsonSerializerSettings setting = new JsonSerializerSettings();
                 setting.DateFormatHandling = DateFormatHandling.MicrosoftDateFormat;
                 setting.DateFormatString = "yyy-MM-dd HH:mm:ss";
                 setting.ContractResolver = new CamelCasePropertyNamesContractResolver();
                 return setting;
-            });
+            };
 
             User u1 = new User("张三", 25);
             u1.Salary = 10000;
