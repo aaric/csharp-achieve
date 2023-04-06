@@ -59,10 +59,17 @@
     <Compile Include="DataTemplateWindow.xaml.cs">
       <DependentUpon>DataTemplateWindow.xaml</DependentUpon>
     </Compile>
+    <Compile Include="MyCommandWindow.xaml.cs">
+      <DependentUpon>MyCommandWindow.xaml</DependentUpon>
+    </Compile>
     <Compile Include="StyleWindow.xaml.cs">
       <DependentUpon>StyleWindow.xaml</DependentUpon>
     </Compile>
     <Page Include="DataTemplateWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MyCommandWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
