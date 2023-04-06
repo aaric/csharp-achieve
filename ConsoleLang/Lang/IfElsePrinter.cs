@@ -2,9 +2,9 @@
 
 namespace ConsoleLang.Lang
 {
-    public class IfElsePrinter
+    public class IfElsePrinter : MyPrinter
     {
-        public static void print()
+        public void print()
         {
             // if else
             string greeting = $"hello world";

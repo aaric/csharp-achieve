@@ -2,9 +2,9 @@
 
 namespace ConsoleLang.Lang
 {
-    public class NumberPrinter
+    public class NumberPrinter : MyPrinter
     {
-        public static void print()
+        public void print()
         {
             // number
             int a = 3, b = 4, c = 5;

@@ -7,10 +7,25 @@
 
 > C# Lang Learning.
 
-## Sub Project
+## 1 Projects
 
 |NO.|Project Name|Remark|
 |:---:|:---:|-----|
 |1|`ConsoleLang`|*C# Language Demo*|
 |2|`DesktopWinForm`|*C# WinForm Demo*|
 |3|`DesktopWpf`|*C# WPF Demo*|
+
+## 2 NuGet (.NET_Framework v4.8)
+
+|NO.|Package Name|Package Version|Remark|
+|:---:|:---:|:---:|-----|
+|1|`Newtonsoft.Json`|`9.0.1`||
+
+## 3 WPF
+
+### 3.1 Layout
+
+- StackPanel
+- WrapPanel
+- DockPanel
+- UniformGrid

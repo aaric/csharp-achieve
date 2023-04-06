@@ -2,9 +2,9 @@
 
 namespace ConsoleLang.Lang
 {
-    public class StringPrinter
+    public class StringPrinter : MyPrinter
     {
-        public static void print()
+        public void print()
         {
             // string
             string aFriend = "aaric";

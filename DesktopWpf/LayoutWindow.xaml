@@ -5,70 +5,51 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:DesktopWpf"
         mc:Ignorable="d"
-        Title="布局控件" Height="450" Width="800">
-    <!-- StyleFile -->
-    <Window.Resources>
-        <ResourceDictionary Source="LayoutWindowStyle.xaml" />
-    </Window.Resources>
-    
-    <!-- StackPanel -->
-    <!--<StackPanel>
-        <Button Content="测试1" />
-        <Button Content="测试2" />
-    </StackPanel>-->
-
-    <!-- Grid -->
+        Title="LayoutWindow" Height="300" Width="450">
     <Grid ShowGridLines="True">
         <Grid.RowDefinitions>
-            <RowDefinition Height="40" />
-            <RowDefinition Height="40" />
+            <RowDefinition Height="AUTO" />
+            <RowDefinition Height="AUTO" />
             <RowDefinition />
-            <RowDefinition Height="30" />
+            <RowDefinition />
         </Grid.RowDefinitions>
 
-        <!--<Button Grid.Column="0" HorizontalAlignment="Left" Content="测试1" />
-        <Button Grid.Column="0" HorizontalAlignment="Left" Margin="110, 0, 0, 0" Content="测试2" Width="100" Height="40" />
-        <Button Grid.Column="0" HorizontalAlignment="Left" Margin="220, 0, 0, 0" Content="测试3" Width="100" Height="40" />-->
-        
-        <StackPanel Grid.Column="0" Orientation="Horizontal">
-            <Button Content="测试1" Style="{StaticResource MenuButton}" />
-            <Button Content="测试2" Style="{StaticResource MenuButton}" />
-            <Button Content="测试3" Style="{StaticResource MenuButton}" />
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition />
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+
+        <Border Grid.Row="0" Grid.Column="0" Background="Red" Height="100" Grid.ColumnSpan="2" />
+        <!--<Border Grid.Row="0" Grid.Column="1" Background="Yellow" />-->
+        <Border Grid.Row="1" Grid.Column="0" Background="Green" />
+        <Border Grid.Row="1" Grid.Column="1" Background="Blue" />
+
+        <StackPanel Grid.Row="2" Grid.Column="0" Orientation="Horizontal">
+            <Button Content="测试" />
+            <Button Content="测试" />
+            <Button Content="测试" />
         </StackPanel>
 
-        <StackPanel Grid.Row="1" Grid.Column="0" Orientation="Horizontal">
-            <Button Content="I" Style="{StaticResource ShortcutButton}" />
-            <Button Content="II" Style="{StaticResource ShortcutButton}" />
-            <Button Content="III" Style="{StaticResource ShortcutButton}" />
-            <Button Content="VI" Style="{StaticResource ShortcutButton}" />
-            <Button Content="V" Style="{StaticResource ShortcutButton}" />
-            <Button Content="VI" Style="{StaticResource ShortcutButton}" />
-        </StackPanel>
-        
-        <Grid Grid.Row="2" Grid.Column="0">
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="40" />
-                <ColumnDefinition />
-            </Grid.ColumnDefinitions>
-            
-            <StackPanel Grid.Column="0">
-                <Button Content="1" Style="{DynamicResource LineButton}" />
-                <Button Content="2" Style="{DynamicResource LineButton}" />
-                <Button Content="3" Style="{DynamicResource LineButton}" />
-                <Button Content="4" Style="{DynamicResource LineButton}" />
-                <Button Content="5" Style="{DynamicResource LineButton}" />
-                <Button Content="6" Style="{DynamicResource LineButton}" />
-                <Button Content="7" Style="{DynamicResource LineButton}" />
-                <Button Content="8" Style="{DynamicResource LineButton}" />
-                <Button Content="9" Style="{DynamicResource LineButton}" />
-                <Button Content="10" Style="{DynamicResource LineButton}" />
-            </StackPanel>
-            
-            <TextBox Grid.Column="1" TextWrapping="Wrap"></TextBox>
-        </Grid>
-        
-        <StackPanel Grid.Row="3" Grid.Column="0" Orientation="Horizontal">
-            <Label Content="状态栏" />
-        </StackPanel>
+        <WrapPanel Grid.Row="2" Grid.Column="1" Orientation="Vertical">
+            <Button Content="测试" />
+            <Button Content="测试" />
+            <Button Content="测试" />
+        </WrapPanel>
+
+        <DockPanel Grid.Row="3" Grid.Column="0" LastChildFill="False">
+            <Button Content="测试" DockPanel.Dock="Left" />
+            <Button Content="测试" DockPanel.Dock="Top" />
+            <Button Content="测试" DockPanel.Dock="Right" />
+            <Button Content="测试" DockPanel.Dock="Bottom" />
+        </DockPanel>
+
+        <UniformGrid Grid.Row="3" Grid.Column="1" Rows="3" Columns="2">
+            <Button Content="测试" />
+            <Button Content="测试" />
+            <Button Content="测试" />
+            <Button Content="测试" />
+            <Button Content="测试" />
+            <Button Content="测试" />
+        </UniformGrid>
     </Grid>
 </Window>
