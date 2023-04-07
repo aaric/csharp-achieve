@@ -59,6 +59,9 @@
     <Compile Include="DataTemplateWindow.xaml.cs">
       <DependentUpon>DataTemplateWindow.xaml</DependentUpon>
     </Compile>
+    <Compile Include="DynamicResourceWindow.xaml.cs">
+      <DependentUpon>DynamicResourceWindow.xaml</DependentUpon>
+    </Compile>
     <Compile Include="MyCommandWindow.xaml.cs">
       <DependentUpon>MyCommandWindow.xaml</DependentUpon>
     </Compile>
@@ -66,6 +69,14 @@
       <DependentUpon>StyleWindow.xaml</DependentUpon>
     </Compile>
     <Page Include="DataTemplateWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="DynamicResourceWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="GlobalStyle.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
