@@ -15,6 +15,13 @@
 |2|`DesktopWinForm`|*C# WinForm Demo*|
 |3|`DesktopWpf`|*C# WPF Demo*|
 
+1. 语言基础（csharp）
+2. 网络客户端（http/https/mqtt）
+3. 解析文件（txt/xml/excel/json）
+4. 定时调度（Quartz.NET）
+5. 桌面开发技术（WinForm或WPF）
+6. 制作安装包（可选）
+
 ## 2 NuGet (.NET_Framework v4.8)
 
 |NO.|Package Name|Package Version|Remark|
@@ -29,3 +36,9 @@
 - WrapPanel
 - DockPanel
 - UniformGrid
+
+### 3.2 animation
+
+- DoubleAnimation
+- DoubleAnimationUsingPath
+- DoubleAnimationUsingKeyFrames

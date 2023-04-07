@@ -47,6 +47,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Lang\FilePrinter.cs" />
+    <Compile Include="Lang\HttpClientPrinter.cs" />
     <Compile Include="Lang\MyPrinter.cs" />
     <Compile Include="Lang\IfElsePrinter.cs" />
     <Compile Include="Lang\JsonPrinter.cs" />
