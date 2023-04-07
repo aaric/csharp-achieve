@@ -36,3 +36,9 @@
 - WrapPanel
 - DockPanel
 - UniformGrid
+
+### 3.2 animation
+
+- DoubleAnimation
+- DoubleAnimationUsingPath
+- DoubleAnimationUsingKeyFrames
