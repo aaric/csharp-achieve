@@ -37,7 +37,7 @@
 - DockPanel
 - UniformGrid
 
-### 3.2 animation
+### 3.2 Animation
 
 - DoubleAnimation
 - DoubleAnimationUsingPath
