@@ -18,7 +18,13 @@ namespace ConsoleLang.Lang
 
         private void loadXmlFile()
         {
-            string path = @"E:\test_file\mytext.xml";
+            string path = @"E:\mytext.xml";
+
+            // 判断文件存在
+            if (File.Exists(path))
+            {
+                File.Delete(path);
+            }
 
             // 创建XML文件
             XmlDocument document = new XmlDocument();
@@ -54,10 +60,16 @@ namespace ConsoleLang.Lang
 
         private void loadTxtFile()
         {
-            string path = @"E:\test_file\mytext.txt";
+            string path = @"E:\mytext.txt";
 
             try
             {
+                // 判断文件存在
+                if (File.Exists(path))
+                {
+                    File.Delete(path);
+                }
+
                 // 创建文本文件
                 using (StreamWriter sw = new StreamWriter(path))
                 {
@@ -81,11 +93,6 @@ namespace ConsoleLang.Lang
                         index++;
                         Console.WriteLine($"{index}: {sr.ReadLine()}");
                     }
-                }
-
-                if (File.Exists(path))
-                {
-                    File.Delete(path);
                 }
             }
             catch (Exception e)
