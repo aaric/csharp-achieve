@@ -41,14 +41,14 @@ namespace ConsoleLang.Lang
             document.AppendChild(user);
 
             document.Save(path);
-            
+
             // 读取XML文件
             document = new XmlDocument();
             document.Load(path);
             XmlElement root = document.DocumentElement;
             foreach (XmlNode node in root.ChildNodes)
             {
-                Console.WriteLine(node["Id"].InnerText);
+                Console.WriteLine(node.ChildNodes[0].InnerText);
             }
         }
 
