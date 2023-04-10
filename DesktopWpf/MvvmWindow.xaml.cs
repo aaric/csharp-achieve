@@ -1,19 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Linq;
-using System.Reflection.Emit;
-using System.Runtime.CompilerServices;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Shapes;
+using CommunityToolkit.Mvvm.ComponentModel;
+using CommunityToolkit.Mvvm.Input;
+using CommunityToolkit.Mvvm.Messaging;
 
 namespace DesktopWpf
 {
@@ -27,19 +16,14 @@ namespace DesktopWpf
             InitializeComponent();
 
             this.DataContext = new MvvmWindowModel();
+
+            WeakReferenceMessenger.Default.Register<string, string>(this, "Token", (s, e) => { MessageBox.Show(e); });
         }
     }
 
-    public class MvvmWindowModel : INotifyPropertyChanged
+    public class MvvmWindowModel : ObservableObject
     {
-        public event PropertyChangedEventHandler PropertyChanged;
-
-        public void NotifyPropertyChanged([CallerMemberName] string propertyName = "")
-        {
-            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
-        }
-
-        public MyButtonCommand MyButtonCommand { get; set; }
+        public RelayCommand<string> MyButtonCommand { get; set; }
 
         private string myLabel;
 
@@ -49,42 +33,21 @@ namespace DesktopWpf
             set
             {
                 myLabel = value;
-                NotifyPropertyChanged();
+                OnPropertyChanged();
             }
         }
 
         public MvvmWindowModel()
         {
-            this.MyButtonCommand = new MyButtonCommand(Show);
+            this.MyButtonCommand = new RelayCommand<string>(Show);
         }
 
-        public void Show()
+        public void Show(String content)
         {
             string tips = "hello world";
             this.MyLabel = tips;
-            MessageBox.Show(tips);
-        }
-    }
-
-    public class MyButtonCommand : ICommand
-    {
-        public Action MvvmWindowAction { get; set; }
-
-        public MyButtonCommand(Action action)
-        {
-            this.MvvmWindowAction = action;
-        }
-
-        public event EventHandler CanExecuteChanged;
-
-        public bool CanExecute(object parameter)
-        {
-            return true;
-        }
-
-        public void Execute(object parameter)
-        {
-            this.MvvmWindowAction();
+            //MessageBox.Show(tips);
+            WeakReferenceMessenger.Default.Send(tips, "Token");
         }
     }
 }

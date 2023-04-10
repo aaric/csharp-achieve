@@ -24,9 +24,16 @@
 
 ## 2 NuGet (.NET_Framework v4.8)
 
+### 2.1 Config
+
+> `https://api.nuget.org/v3/index.json`
+
+### 2.2 Packages
+
 |NO.|Package Name|Package Version|Remark|
 |:---:|:---:|:---:|-----|
-|1|`Newtonsoft.Json`|`9.0.1`||
+|1|`Newtonsoft.Json`|`13.0.3`||
+|2|`CommunityToolkit.Mvvm`|`8.1.0`|*`MvvmLight` Deprecated*|
 
 ## 3 WPF
 
