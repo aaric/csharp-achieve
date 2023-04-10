@@ -11,7 +11,7 @@ namespace ConsoleLang
         public static void Main(string[] args)
         {
             MyPrinter myPrinter = null;
-            string clazz = typeof(JsonPrinter).Name;
+            string clazz = typeof(HttpClientPrinter).Name;
             switch (clazz)
             {
                 case "StringPrinter":
@@ -49,7 +49,7 @@ namespace ConsoleLang
             }
 
             // exit
-            //Console.ReadKey();
+            Console.ReadKey();
         }
     }
 }

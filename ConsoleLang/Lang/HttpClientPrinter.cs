@@ -2,6 +2,7 @@
 using System.Net.Http;
 using System.Net.Http.Headers;
 using System.Text;
+using System.Threading.Tasks;
 
 namespace ConsoleLang.Lang
 {
@@ -35,6 +36,14 @@ namespace ConsoleLang.Lang
             StringContent jsonPost = new StringContent("{\"title\":\"BMW Pencil\"}", Encoding.UTF8, "application/json");
             HttpResponseMessage response = await client.PostAsync("https://dummyjson.com/products/add", jsonPost);
             Console.WriteLine($"post json -> {response.Content.ReadAsStringAsync().Result}\n");
+
+            // post sync
+            /*Task<HttpResponseMessage> responseTask = client.PostAsync("https://dummyjson.com/products/add", jsonPost);
+            responseTask.Wait();
+            response = responseTask.Result;
+            Task<string> jsonTask = response.Content.ReadAsStringAsync();
+            jsonTask.Wait();
+            Console.WriteLine($"post sync json -> {jsonTask.Result}\n");*/
 
             // put
             StringContent jsonPut =
