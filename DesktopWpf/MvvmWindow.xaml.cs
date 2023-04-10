@@ -1,8 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Collections.Specialized;
 using System.ComponentModel;
 using System.Linq;
+using System.Reflection.Emit;
 using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
@@ -18,76 +18,61 @@ using System.Windows.Shapes;
 namespace DesktopWpf
 {
     /// <summary>
-    /// ICommandWindow.xaml 的交互逻辑
+    /// MvvmWindow.xaml 的交互逻辑
     /// </summary>
-    public partial class MyCommandWindow : Window
+    public partial class MvvmWindow : Window
     {
-        public MyCommandWindow()
+        public MvvmWindow()
         {
             InitializeComponent();
 
-            this.DataContext = new MyViewModel();
-        }
-
-        private void Button_Click(object sender, RoutedEventArgs e)
-        {
-            MessageBox.Show("hello world");
+            this.DataContext = new MvvmWindowModel();
         }
     }
 
-    public class BaseViewModel : INotifyPropertyChanged
+    public class MvvmWindowModel : INotifyPropertyChanged
     {
         public event PropertyChangedEventHandler PropertyChanged;
 
-        //public void NotifyPropertyChanged(string propertyName)
         public void NotifyPropertyChanged([CallerMemberName] string propertyName = "")
         {
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
         }
-    }
 
-    public class MyViewModel : BaseViewModel
-    {
+        public MyButtonCommand MyButtonCommand { get; set; }
 
-        public MvvmCommand MyCommand { get; set; }
+        private string myLabel;
 
-        private string myName;
-
-        public string MyName {
-            get
-            {
-                return myName;
-            }
+        public string MyLabel
+        {
+            get => myLabel;
             set
             {
-                myName = value;
-                //PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("MyName"));
-                //NotifyPropertyChanged("MyName");
+                myLabel = value;
                 NotifyPropertyChanged();
             }
         }
 
-        public MyViewModel()
+        public MvvmWindowModel()
         {
-            this.MyCommand = new MvvmCommand(Show);
-            this.MyName = "hello pwf";
+            this.MyButtonCommand = new MyButtonCommand(Show);
         }
 
         public void Show()
         {
             string tips = "hello world";
+            this.MyLabel = tips;
             MessageBox.Show(tips);
-            this.MyName = tips;
         }
     }
 
-    public class MvvmCommand : ICommand
+    public class MyButtonCommand : ICommand
     {
-        public Action MyAction { get; set; }
+        public Action MvvmWindowAction { get; set; }
 
-        public MvvmCommand(Action myAction)
+        public MyButtonCommand(Action action)
         {
-            this.MyAction = myAction;
+            this.MvvmWindowAction = action;
         }
 
         public event EventHandler CanExecuteChanged;
@@ -99,7 +84,7 @@ namespace DesktopWpf
 
         public void Execute(object parameter)
         {
-            this.MyAction();
+            this.MvvmWindowAction();
         }
     }
 }
