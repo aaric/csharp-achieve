@@ -56,6 +56,7 @@
     <Compile Include="Lang\LoopPrinter.cs" />
     <Compile Include="Lang\NumberPrinter.cs" />
     <Compile Include="Lang\ObjectPrinter.cs" />
+    <Compile Include="Lang\RsaPrinter.cs" />
     <Compile Include="Lang\StringPrinter.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

@@ -44,10 +44,10 @@ namespace DesktopWpf
 
         public void Show(String content)
         {
-            string tips = "hello world";
-            this.MyLabel = tips;
+            // string tips = "hello world";
+            this.MyLabel = content;
             //MessageBox.Show(tips);
-            WeakReferenceMessenger.Default.Send(tips, "Token");
+            WeakReferenceMessenger.Default.Send(content, "Token");
         }
     }
 }

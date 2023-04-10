@@ -9,7 +9,7 @@
     <Grid>
         <StackPanel>
             <Label Content="{Binding MyLabel}" />
-            <Button Content="测试" Command="{Binding MyButtonCommand}" />
+            <Button Content="测试" Command="{Binding MyButtonCommand}" CommandParameter="hello wpf" />
         </StackPanel>
     </Grid>
 </Window>
