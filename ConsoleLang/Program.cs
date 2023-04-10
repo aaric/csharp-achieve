@@ -11,7 +11,7 @@ namespace ConsoleLang
         public static void Main(string[] args)
         {
             MyPrinter myPrinter = null;
-            string clazz = typeof(FilePrinter).Name;
+            string clazz = typeof(JsonPrinter).Name;
             switch (clazz)
             {
                 case "StringPrinter":
