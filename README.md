@@ -34,9 +34,10 @@
 
 |NO.|SDK Version|Package Name|Package Version|Remark|
 |:---:|:---:|:---:|:---:|-----|
-|1|`4.7.2`|`Newtonsoft.Json`|`13.0.3`||
-|2|`4.7.2`|`CommunityToolkit.Mvvm`|`8.1.0`|*[`MvvmLight`]() Deprecated*|
-|3|`4.7.2`|`BouncyCastle.Cryptography`|`2.1.1`||
+|1|`4.8`|`Newtonsoft.Json`|`13.0.3`||
+|2|`4.8`|`CommunityToolkit.Mvvm`|`8.1.0`|*[`MvvmLight`]() Deprecated*|
+|3|`4.8`|`BouncyCastle.Cryptography`|`2.1.1`||
+|4|`7.0`|`Microsoft.Data.Sqlite`|`7.0.5`||
 
 ## 3 WPF
 
