@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace DesktopWpfDotNetFx48.Properties
+namespace DesktopWpf.Properties
 {
 
 

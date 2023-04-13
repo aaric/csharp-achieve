@@ -13,8 +13,8 @@
 |:---:|:---:|:---:|-----|
 |1|`ConsoleLang`|`4.8`|*C# Language Demo*|
 |2|`DesktopWinForm`|`4.8`|*C# WinForm Demo*|
+|4|`DesktopWpf`|`4.8`|*C# WPF .NET Framework 4.8 Demo*|
 |3|`DesktopWpfDotNetFx35`|`3.5`|*C# WPF .NET Framework 3.5 Demo*|
-|4|`DesktopWpfDotNetFx48`|`4.8`|*C# WPF .NET Framework 4.85 Demo*|
 |5|`DesktopWpfDotNetFx48`|`7.0`|*C# WPF .NET 7.0 Demo*|
 
 1. 语言基础（csharp）
