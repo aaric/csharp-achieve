@@ -11,7 +11,7 @@ namespace ConsoleLang
         public static void Main(string[] args)
         {
             MyPrinter myPrinter = null;
-            string clazz = typeof(FilePrinter).Name;
+            string clazz = typeof(RsaPrinter).Name;
             switch (clazz)
             {
                 case "StringPrinter":
@@ -37,6 +37,9 @@ namespace ConsoleLang
                     break;
                 case "FilePrinter":
                     myPrinter = new FilePrinter();
+                    break;
+                case "RsaPrinter":
+                    myPrinter = new RsaPrinter();
                     break;
                 default:
                     Console.WriteLine("Error: Not found!");

@@ -49,7 +49,7 @@ namespace DesktopWpf
     public class MyViewModel : BaseViewModel
     {
 
-        public MyCommand MyCommand { get; set; }
+        public MvvmCommand MyCommand { get; set; }
 
         private string myName;
 
@@ -69,7 +69,7 @@ namespace DesktopWpf
 
         public MyViewModel()
         {
-            this.MyCommand = new MyCommand(Show);
+            this.MyCommand = new MvvmCommand(Show);
             this.MyName = "hello pwf";
         }
 
@@ -81,11 +81,11 @@ namespace DesktopWpf
         }
     }
 
-    public class MyCommand : ICommand
+    public class MvvmCommand : ICommand
     {
         public Action MyAction { get; set; }
 
-        public MyCommand(Action myAction)
+        public MvvmCommand(Action myAction)
         {
             this.MyAction = myAction;
         }
