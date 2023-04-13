@@ -9,11 +9,13 @@
 
 ## 1 Projects
 
-|NO.|Project Name|Remark|
-|:---:|:---:|-----|
-|1|`ConsoleLang`|*C# Language Demo*|
-|2|`DesktopWinForm`|*C# WinForm Demo*|
-|3|`DesktopWpf`|*C# WPF Demo*|
+|NO.|Project Name|SDK Version|Remark|
+|:---:|:---:|:---:|-----|
+|1|`ConsoleLang`|`4.8`|*C# Language Demo*|
+|2|`DesktopWinForm`|`4.8`|*C# WinForm Demo*|
+|3|`DesktopWpfDotNetFx35`|`3.5`|*C# WPF .NET Framework 3.5 Demo*|
+|4|`DesktopWpfDotNetFx48`|`4.8`|*C# WPF .NET Framework 4.85 Demo*|
+|5|`DesktopWpfDotNetFx48`|`7.0`|*C# WPF .NET 7.0 Demo*|
 
 1. 语言基础（csharp）
 2. 网络客户端（http/https/mqtt）
