@@ -5,6 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:DesktopWpfDotNet70"
         mc:Ignorable="d"
+        WindowStartupLocation="CenterScreen"
         Title="MqttWindow" Height="300" Width="450">
     <Grid Margin="10">
         <Grid.RowDefinitions>

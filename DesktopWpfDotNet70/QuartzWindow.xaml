@@ -1,0 +1,30 @@
+﻿<Window x:Class="DesktopWpfDotNet70.QuartzWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:DesktopWpfDotNet70"
+        mc:Ignorable="d"
+        WindowStartupLocation="CenterScreen"
+        Title="QuartzWindow" Height="300" Width="450">
+    <Window.Resources>
+        <Style x:Key="TestButton" TargetType="Button">
+            <Setter Property="Margin" Value="5, 0" />
+            <Setter Property="Width" Value="100" />
+        </Style>
+    </Window.Resources>
+    
+    <Grid Margin="10">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="40" />
+        </Grid.RowDefinitions>
+
+        <TextBlock Text="{Binding MyLog}" TextWrapping="Wrap" />
+
+        <StackPanel Grid.Row="1" Orientation="Horizontal" HorizontalAlignment="Center">
+            <Button Content="启动任务" Command="{Binding MyTestCommand}" CommandParameter="start" Style="{StaticResource TestButton}" />
+            <Button Content="暂停任务" Command="{Binding MyTestCommand}" CommandParameter="pause" Style="{StaticResource TestButton}" />
+        </StackPanel>
+    </Grid>
+</Window>
