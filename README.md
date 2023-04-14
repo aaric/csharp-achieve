@@ -6,7 +6,7 @@
 [![C#](https://img.shields.io/badge/C%23-7.3-brightgreen.svg?style=flat&logo=csharp)](https://learn.microsoft.com/zh-cn/dotnet/csharp/programming-guide)
 [![.NET](https://img.shields.io/badge/.NET-7.0-brightgreen.svg?style=flat&logo=.net)](https://dotnet.microsoft.com/zh-cn/download/dotnet/7.0)
 [![C#](https://img.shields.io/badge/C%23-11.0-brightgreen.svg?style=flat&logo=csharp)](https://learn.microsoft.com/zh-cn/dotnet/csharp/programming-guide)
-[![Release](https://img.shields.io/badge/Release-0.7.0-blue.svg)](https://github.com/aaric/csharp-achieve/releases)
+[![Release](https://img.shields.io/badge/Release-0.8.0-blue.svg)](https://github.com/aaric/csharp-achieve/releases)
 
 > C# Lang Learning.
 
@@ -58,3 +58,8 @@
 - DoubleAnimation
 - DoubleAnimationUsingPath
 - DoubleAnimationUsingKeyFrames
+
+## 4 Installer
+
+> [Microsoft Visual Studio Installer Projects 2022](https://marketplace.visualstudio.com/items?itemName=VisualStudioClient.MicrosoftVisualStudio2022InstallerProjects)  
+> [C# 软件打包与制作安装向导](https://www.bilibili.com/video/BV1jA4y1S7kc)
