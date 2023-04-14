@@ -20,18 +20,10 @@ namespace DesktopWpfDotNet70
     }
 
     /// <summary>
-    /// SQLiteWindow.xaml 数据模型
+    /// SQLiteWindow.xaml 的数据上下文
     /// </summary>
     public class SQLiteWindowDataContext : ObservableObject
     {
-        public RelayCommand<string> MyTestCommand { get; set; }
-
-        public SQLiteWindowDataContext()
-        {
-            this.MyTestCommand = new RelayCommand<string>(ExecuteSql);
-            this.MyResult = "Hello SQLite!";
-        }
-
         private string mySql;
 
         public string MySql
@@ -56,6 +48,15 @@ namespace DesktopWpfDotNet70
             }
         }
 
+        public RelayCommand<string> MyTestCommand { get; set; }
+
+        public SQLiteWindowDataContext()
+        {
+            this.mySql = string.Empty;
+            this.myResult = "Hello SQLite!";
+            this.MyTestCommand = new RelayCommand<string>(ExecuteSql);
+        }
+
         private void Show(string content)
         {
             MessageBox.Show(content);
@@ -69,8 +70,9 @@ namespace DesktopWpfDotNet70
         /// 4. SELECT * FROM person;
         /// </summary>
         /// <param name="content"></param>
-        private void ExecuteSql(string content)
+        private void ExecuteSql(string? content)
         {
+            // https://learn.microsoft.com/zh-cn/dotnet/standard/data/sqlite/?tabs=netcore-cli
             using (SqliteConnection connection = new SqliteConnection("Data Source=hello.db"))
             {
                 connection.Open();
