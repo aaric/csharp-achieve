@@ -71,6 +71,7 @@ namespace DesktopWpfDotNet70
         /// <param name="content"></param>
         private void ExecuteSql(string content)
         {
+            // https://learn.microsoft.com/zh-cn/dotnet/standard/data/sqlite/?tabs=netcore-cli
             using (SqliteConnection connection = new SqliteConnection("Data Source=hello.db"))
             {
                 connection.Open();
