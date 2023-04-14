@@ -9,6 +9,7 @@
 
   <ItemGroup>
     <PackageReference Include="CommunityToolkit.Mvvm" Version="8.1.0" />
+    <PackageReference Include="M2Mqtt" Version="4.3.0" />
     <PackageReference Include="Microsoft.Data.Sqlite" Version="7.0.5" />
   </ItemGroup>
 

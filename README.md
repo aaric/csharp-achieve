@@ -1,6 +1,7 @@
 # csharp-achieve
 
 [![License](https://img.shields.io/badge/License-MIT-green.svg?style=flat&logo=git)](https://www.mit-license.org)
+[![Visual Studio](https://img.shields.io/badge/VS-2022-brightgreen.svg?style=flat&logo=visualstudio)](https://visualstudio.microsoft.com/zh-hans/downloads/)
 [![.NET Framework](https://img.shields.io/badge/.NET_Framework-4.8-brightgreen.svg?style=flat&logo=.net)](https://dotnet.microsoft.com/zh-cn/download/dotnet-framework)
 [![C#](https://img.shields.io/badge/C%23-7.3-brightgreen.svg?style=flat&logo=csharp)](https://learn.microsoft.com/zh-cn/dotnet/csharp/programming-guide)
 [![.NET](https://img.shields.io/badge/.NET-7.0-brightgreen.svg?style=flat&logo=.net)](https://dotnet.microsoft.com/zh-cn/download/dotnet/7.0)
@@ -40,6 +41,7 @@
 |2|`4.8`|`CommunityToolkit.Mvvm`|`8.1.0`|*[`MvvmLight`]() Deprecated*|
 |3|`4.8`|`BouncyCastle.Cryptography`|`2.1.1`||
 |4|`7.0`|`Microsoft.Data.Sqlite`|`7.0.5`||
+|4|`7.0`|`M2Mqtt`|`4.3.0`||
 
 ## 3 WPF
 
