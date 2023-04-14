@@ -54,6 +54,7 @@ namespace DesktopWpfDotNet70
             });
         }
 
+        // https://www.quartz-scheduler.net/documentation/quartz-3.x/quick-start.html
         private async void click(string? action)
         {
             switch (action)
