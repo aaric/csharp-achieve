@@ -1,9 +1,10 @@
 # csharp-achieve
 
 [![License](https://img.shields.io/badge/License-MIT-green.svg?style=flat&logo=git)](https://www.mit-license.org)
-[![C#](https://img.shields.io/badge/C%23-7.2-brightgreen.svg?style=flat&logo=csharp)](https://learn.microsoft.com/zh-cn/dotnet/csharp/programming-guide)
 [![.NET Framework](https://img.shields.io/badge/.NET_Framework-4.8-brightgreen.svg?style=flat&logo=.net)](https://dotnet.microsoft.com/zh-cn/download/dotnet-framework)
+[![C#](https://img.shields.io/badge/C%23-7.3-brightgreen.svg?style=flat&logo=csharp)](https://learn.microsoft.com/zh-cn/dotnet/csharp/programming-guide)
 [![.NET](https://img.shields.io/badge/.NET-7.0-brightgreen.svg?style=flat&logo=.net)](https://dotnet.microsoft.com/zh-cn/download/dotnet/7.0)
+[![C#](https://img.shields.io/badge/C%23-11.0-brightgreen.svg?style=flat&logo=csharp)](https://learn.microsoft.com/zh-cn/dotnet/csharp/programming-guide)
 [![Release](https://img.shields.io/badge/Release-0.6.0-blue.svg)](https://github.com/aaric/csharp-achieve/releases)
 
 > C# Lang Learning.
