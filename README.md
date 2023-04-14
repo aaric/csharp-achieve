@@ -6,7 +6,7 @@
 [![C#](https://img.shields.io/badge/C%23-7.3-brightgreen.svg?style=flat&logo=csharp)](https://learn.microsoft.com/zh-cn/dotnet/csharp/programming-guide)
 [![.NET](https://img.shields.io/badge/.NET-7.0-brightgreen.svg?style=flat&logo=.net)](https://dotnet.microsoft.com/zh-cn/download/dotnet/7.0)
 [![C#](https://img.shields.io/badge/C%23-11.0-brightgreen.svg?style=flat&logo=csharp)](https://learn.microsoft.com/zh-cn/dotnet/csharp/programming-guide)
-[![Release](https://img.shields.io/badge/Release-0.6.0-blue.svg)](https://github.com/aaric/csharp-achieve/releases)
+[![Release](https://img.shields.io/badge/Release-0.7.0-blue.svg)](https://github.com/aaric/csharp-achieve/releases)
 
 > C# Lang Learning.
 
@@ -37,11 +37,12 @@
 
 |NO.|SDK Version|Package Name|Package Version|Remark|
 |:---:|:---:|:---:|:---:|-----|
-|1|`4.8`|`Newtonsoft.Json`|`13.0.3`||
-|2|`4.8`|`CommunityToolkit.Mvvm`|`8.1.0`|*[`MvvmLight`]() Deprecated*|
-|3|`4.8`|`BouncyCastle.Cryptography`|`2.1.1`||
-|4|`7.0`|`Microsoft.Data.Sqlite`|`7.0.5`||
-|4|`7.0`|`M2Mqtt`|`4.3.0`||
+|1|`4.8`|[`Newtonsoft.Json`](ConsoleLang/Lang/JsonPrinter.cs)|`13.0.3`||
+|2|`4.8`|[`CommunityToolkit.Mvvm`](DesktopWpfDotNetFx48/MvvmWindow.xaml.cs)|`8.1.0`|*[`MvvmLight`](https://www.nuget.org/packages/MvvmLight) Deprecated*|
+|3|`4.8`|[`BouncyCastle.Cryptography`](ConsoleLang/Lang/RsaPrinter.cs)|`2.1.1`||
+|4|`7.0`|[`Microsoft.Data.Sqlite`](DesktopWpfDotNet70/SQLiteWindow.xaml.cs)|`7.0.5`||
+|5|`7.0`|[`M2Mqtt`](DesktopWpfDotNet70/MqttWindow.xaml.cs)|`4.3.0`||
+|6|`7.0`|[`Quartz`](DesktopWpfDotNet70/QuartzWindow.xaml.cs)|`3.6.2`||
 
 ## 3 WPF
 
